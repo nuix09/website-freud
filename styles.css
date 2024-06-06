@@ -68,9 +68,11 @@ nav ul li a {
     /* place-items: center; */
     align-content: center;
     vertical-align: bottom;
-    /* height: 500px; */
 }
-
+.zoom-fade-text {
+    font-size: 4rem;
+    transition: transform 0.3s, opacity 0.3s;
+  }
 .hidden{
     opacity: 0;
     transition: all 1s;
