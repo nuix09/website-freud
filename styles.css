@@ -8,9 +8,36 @@ body {
     overflow-x: hidden;
 }
 
+header {
+    position:sticky;
+    top: 0;
+    width: 100%;
+    background-color: #000000fd;
+    padding: 1rem 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    color: #FFFFA6;
+}
+
 .logo-container {
+    display: grid;
     position: fixed;
-    top: 50%;
+    margin: auto;
+    top: 20rem;
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.3s ease;
@@ -19,54 +46,30 @@ body {
 .logo {
     display: grid;
     place-items: center;
-    width: 50%;
-    max-width: 300px; /* Set maximum width if needed */
+    align-content: center;
+    width: 30rem;
     border-radius: 50%;
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 768px) {
-    .logo-container {
-        width: 70%;
-    }
-    
-    .logo {
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .logo-container {
-        width: 80%;
-    }
-    
-    .logo {
-        width: 80%;
-    }
-}
-
-
-
-
 .scrolled .logo-container {
-    top: 20px;
+    top: 1rem;
     left: 99%;
     transform: translate(-100%, 0);
 }
 
 .scrolled .logo {
-    width: 75px;
+    width: 5rem;
 }
+
 .name{
     display: grid;
-    padding-top: 500px;
+    padding-top: 32rem;
     /* place-items: center; */
     align-content: center;
     vertical-align: bottom;
-    min-width: 75vh;
     /* height: 500px; */
 }
-
 
 .hidden{
     opacity: 0;
@@ -77,40 +80,13 @@ body {
     opacity: 1;
 }
 
-header {
-    background-color: #000000fd;
-    padding: 1rem 0;
-    text-align: center;
-}
-
-
-header h1 {
-    margin: 0;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    color: #FFFFA6;
-}
-
 section {
-    height: 100px;
-    padding: 20px;
-    margin: 20px 0;
+    height: 6.25rem;
+    padding: 1.25rem;
+    margin: 1.25rem 0;
     background-color: #2C2C2B;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
 }
 
 div.album {
@@ -127,7 +103,7 @@ div.album {
   }
   
   div.desc {
-    padding: 15px;
+    padding: 1rem;
     text-align: center;
   }
   
@@ -136,7 +112,7 @@ div.album {
   }
   
   .responsive {
-    padding: 0 6px;
+    padding: 0 0.375rem;
     float: left;
     width: 24.99999%;
   }
@@ -144,7 +120,7 @@ div.album {
   @media only screen and (max-width: 700px) {
     .responsive {
       width: 49.99999%;
-      margin: 6px 0;
+      margin: 0.375rem 0;
     }
   }
   
@@ -154,10 +130,9 @@ div.album {
     }
   }
   
-
 footer {
     text-align: center;
-    padding: 5px 0;
+    padding: 0.3125rem 0;
     background-color: #000000;
     color: white;
     position: fixed;
