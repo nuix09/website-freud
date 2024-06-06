@@ -10,5 +10,15 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 
-const hiddenElements = document.querySelectorAll('.profilepic');
+const hiddenElements = document.querySelectorAll('.name');
 hiddenElements.forEach((el) => observer.observe(el));
+
+window.addEventListener('scroll', () => {
+    const scrolledClass = 'scrolled';
+
+    if (window.scrollY > 0) {
+        document.body.classList.add(scrolledClass);
+    } else {
+        document.body.classList.remove(scrolledClass);
+    }
+});
