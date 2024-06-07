@@ -45,6 +45,7 @@ nav ul li a {
 
 .logo {
     display: grid;
+    margin: auto;
     place-items: center;
     align-content: center;
     width: 30rem;
@@ -70,7 +71,7 @@ nav ul li a {
     vertical-align: bottom;
 }
 .zoom-fade-text {
-    font-size: 4rem;
+    font-size: 3rem;
     transition: transform 0.3s, opacity 0.3s;
   }
 .hidden{
@@ -135,9 +136,21 @@ div.album {
 footer {
     text-align: center;
     padding: 0.3125rem 0;
-    background-color: #000000;
+    background-color: #00000060;
     color: white;
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 20rem;
+}
+  .scrolled .logo {
+    width: 4.5rem;
+  }
+  .zoom-fade-text {
+    font-size: 2rem;
+  }
 }
