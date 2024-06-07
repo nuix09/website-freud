@@ -27,19 +27,28 @@ window.addEventListener('scroll', function() {
     const text = document.querySelector('.zoom-fade-text');
     const scrollY = window.scrollY;
     const windowHeight = window.innerHeight;
+    const offset = windowHeight / 3; // Start the effect after scrolling 1/3
   
-    const progress = scrollY / windowHeight; //for scroll progress
+    if (scrollY > offset) {
+      // Calculate the scroll progress after the offset
+      const progress = (scrollY - offset) / windowHeight;
   
-    if (progress <= 1) {
-      const scale = 1 + progress; // Zoom in
-      const opacity = 1 - progress; // Fade out
+      // Adjust the zoom and opacity based on scroll progress
+      if (progress <= 1) {
+        const scale = 1 + progress; // Zoom in
+        const opacity = 1 - progress; // Fade out
   
-      text.style.transform = `scale(${scale})`;
-      text.style.opacity = opacity;
-    } 
-    else {
-      // Reset once the animation completes to maintain final state
-      text.style.transform = 'scale(2)';
-      text.style.opacity = 0;
+        text.style.transform = `scale(${scale})`;
+        text.style.opacity = opacity;
+      } else {
+        // Reset once the animation completes to maintain final state
+        text.style.transform = 'scale(2)';
+        text.style.opacity = 0;
+      }
+    } else {
+      // Reset to initial state if before the offset
+      text.style.transform = 'scale(1)';
+      text.style.opacity = 1;
     }
   });
+  
