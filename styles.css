@@ -87,51 +87,28 @@ section {
     height: 6.25rem;
     padding: 1.25rem;
     margin: 1.25rem 0;
-    background-color: #2C2C2B;
+    background-color: #000000;
     border-radius: 0.5rem;
     box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
 }
 
-div.album {
-    border: 1px solid #ccc;
-  }
-  
-  div.album:hover {
-    border: 1px solid #777;
-  }
-  
-  div.album img {
-    width: 100%;
-    height: auto;
-  }
-  
-  div.desc {
-    padding: 1rem;
-    text-align: center;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  .responsive {
-    padding: 0 0.375rem;
-    float: left;
-    width: 24.99999%;
-  }
-  
-  @media only screen and (max-width: 700px) {
-    .responsive {
-      width: 49.99999%;
-      margin: 0.375rem 0;
-    }
-  }
-  
-  @media only screen and (max-width: 500px) {
-    .responsive {
-      width: 100%;
-    }
-  }
+.image-tracker > .album {
+  width: 40vmin;
+  height: 56vmin;
+  object-fit: cover;
+  object-position: center;
+  background-color: #000000;
+}
+
+.image-tracker{
+  display: flex;
+  gap: 4vmin;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  padding-top: 100rem;
+}
   
 footer {
     text-align: center;
