@@ -6,6 +6,7 @@ body {
     color: #FFFFA6;
     box-sizing: border-box;
     overflow-x: hidden;
+    height: 200vh;
 }
 
 header {
@@ -45,7 +46,6 @@ nav ul li a {
 
 .logo {
     display: grid;
-    margin: auto;
     place-items: center;
     align-content: center;
     width: 30rem;
@@ -71,7 +71,7 @@ nav ul li a {
     vertical-align: bottom;
 }
 .zoom-fade-text {
-    font-size: 3rem;
+    font-size: 4rem;
     transition: transform 0.3s, opacity 0.3s;
   }
 .hidden{
@@ -83,37 +83,42 @@ nav ul li a {
     opacity: 1;
 }
 
-section {
-    height: 6.25rem;
-    padding: 1.25rem;
-    margin: 1.25rem 0;
-    background-color: #000000;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.1);
+.albums-container {
+  width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
-.image-tracker > .album {
-  width: 40vmin;
-  height: 56vmin;
-  object-fit: cover;
-  object-position: center;
-  background-color: #000000;
+.album {
+  display: inline-block;
+  width: 200px; /* Adjust width as needed */
+  margin-right: 10px; /* Adjust margin as needed */
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  padding: 10px;
 }
 
-.image-tracker{
-  display: flex;
-  gap: 4vmin;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(0%, -50%);
-  padding-top: 100rem;
+/* Optional: Style for scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
   
 footer {
     text-align: center;
     padding: 0.3125rem 0;
-    background-color: #00000060;
+    background-color: #000000;
     color: white;
     position: fixed;
     width: 100%;
@@ -125,9 +130,9 @@ footer {
     width: 20rem;
 }
   .scrolled .logo {
-    width: 4.5rem;
-  }
+      width: 4.5rem;
+}
   .zoom-fade-text {
-    font-size: 2rem;
-  }
+      font-size: 2rem;
+}
 }
