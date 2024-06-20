@@ -52,3 +52,32 @@ window.addEventListener('scroll', function() {
     }
   });
   
+  function scrollToPosition(container, amount) {
+    const startPosition = container.scrollLeft;
+    const endPosition = startPosition + amount;
+    const distance = endPosition - startPosition;
+    const startTime = performance.now();
+    const duration = 1000; // Duration in milliseconds (1 seconds)
+  
+    function scrollAnimation(currentTime) {
+      const elapsedTime = currentTime - startTime;
+      const progressalb = Math.min(elapsedTime / duration, 1);
+      container.scrollLeft = startPosition + distance * progressalb;
+  
+      if (progressalb < 1) {
+        requestAnimationFrame(scrollAnimation);
+      }
+    }
+  
+    requestAnimationFrame(scrollAnimation);
+  }
+  
+  document.getElementById('scrollLeftBtn').addEventListener('click', () => {
+    const container = document.querySelector('.scroll-container');
+    scrollToPosition(container, -200); // Adjust this value to scroll by a desired amount
+  });
+  
+  document.getElementById('scrollRightBtn').addEventListener('click', () => {
+    const container = document.querySelector('.scroll-container');
+    scrollToPosition(container, 200); // Adjust this value to scroll by a desired amount
+  });
