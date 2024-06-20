@@ -139,8 +139,25 @@ nav ul li a {
 }
 
 button {
-  padding: 10px 20px;
+  padding: 1rem 1.25rem;
+  border-radius: 50%;
   font-size: 16px;
+}
+
+.leftbuttonclass{
+  top:57.5rem;
+  left: 3rem;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.rightbuttonclass{
+  top:57.5rem;
+  left: 69rem;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .scroll-container.scrolling {
