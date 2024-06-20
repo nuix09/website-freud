@@ -17,9 +17,6 @@ header {
     padding: 1rem 0;
     text-align: center;
 }
-header h1 {
-    margin: 0;
-}
 nav ul {
     list-style: none;
     padding: 0;
@@ -82,25 +79,24 @@ nav ul li a {
 .show{
     opacity: 1;
 }
-
+/* 
 .albums-container {
   width: 100%;
   overflow-x: auto;
   white-space: nowrap;
+  margin-left: 50%;
 }
 
 .album {
   display: inline-block;
-  width: 200px; /* Adjust width as needed */
-  margin-right: 10px; /* Adjust margin as needed */
+  width: 12.5rem;
+  margin-right: 0.625rem; 
   background-color: #f0f0f0;
-  border-radius: 5px;
-  padding: 10px;
+  border-radius: 0.3125rem;
+  padding: 0.625rem;
 }
-
-/* Optional: Style for scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0.625rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -114,11 +110,51 @@ nav ul li a {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-  
+   */
+   
+.scroll-container {
+  width: 80%;
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 0 10px;
+  scroll-behavior: smooth;
+}
+
+.scroll-content {
+  display: inline-block;
+}
+
+.item {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin-right: 20px;
+  background-color: lightblue;
+  text-align: center;
+  line-height: 200px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.scroll-container.scrolling {
+  scroll-behavior: unset;
+}
+
+.scrolling .scroll-container {
+  transition: transform 2s;
+}
+
 footer {
     text-align: center;
     padding: 0.3125rem 0;
-    background-color: #000000;
+    background-color: #00000076;
     color: white;
     position: fixed;
     width: 100%;
