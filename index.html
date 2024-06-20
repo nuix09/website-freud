@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>freud</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <header>
@@ -26,20 +25,22 @@
         <center><h4 >Now streaming everywhere</h4></center>
     </div>
     
-    
-    <div class="albums-container" class="albumscroll">
-      <img src="logo_placeholder.png" alt="album" class="album" draggable="false">
-      <img src="logo_placeholder.png" alt="album" class="album" draggable="false">
-      <img src="logo_placeholder.png" alt="album" class="album" draggable="false">
-      <img src="logo_placeholder.png" alt="album" class="album" draggable="false">
-      <img src="logo_placeholder.png" alt="album" class="album" draggable="false">
-      <img src="logo_placeholder.png" alt="album" class="album" draggable="false">
+  <button id="scrollLeftBtn">Left</button>
+  <div class="scroll-container">
+    <div class="scroll-content">
+      <img class="item" src="logo_placeholder.png" alt="album1" draggable="false">
+      <img class="item" src="logo_placeholder.png" alt="album2" draggable="false">
+      <img class="item" src="logo_placeholder.png" alt="album3" draggable="false">
+      <img class="item" src="logo_placeholder.png" alt="album4" draggable="false">
+      <img class="item" src="logo_placeholder.png" alt="album5" draggable="false">
+      <img class="item" src="logo_placeholder.png" alt="album6" draggable="false">
+      <img class="item" src="logo_placeholder.png" alt="album7" draggable="false">
     </div>
-
-    
-    
+  </div>
+  <button id="scrollRightBtn">Right</button>
     <footer>
         <p>&copy; 2024 All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
